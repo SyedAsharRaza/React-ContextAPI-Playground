@@ -1,32 +1,36 @@
-# React(ContextAPI Practice)
+# React Context API Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A clean, hands-on mini-project built to practice global state management in React using `createContext` and `useContext`.
 
-Currently, two official plugins are available:
+## What This Project Demonstrates
+- **Context Creation:** Setting up a shared context (`MyContext`) to avoid prop drilling.
+- **State Provider:** Wrapping child components in `ParentComponent` to expose state (`name`) and its updater function (`setName`).
+- **State Consumption:** Accessing and updating shared state directly inside `ChildComponent` via `useContext`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Project Structure
+```text
+src/
+├── MyContext.ts          # Creates and exports the shared React context
+├── ParentComponent.tsx   # Holds state and wraps children with MyContext.Provider
+├── ChildComponent.tsx    # Consumes context data and triggers state updates
+├── App.tsx               # Root component connecting Parent and Child
+└── App.css               # Component styling
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-folder>
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
