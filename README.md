@@ -21,8 +21,8 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-folder>
+   git clone https://github.com/SyedAsharRaza/React-ContextAPI-Playground
+   cd React-ContextAPI-Playground
    ```
 
 2. **Install dependencies**
